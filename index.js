@@ -28,7 +28,9 @@ connection();
 
 app.use('/users', userRoutes);
 app.use('/auth', authRoutes);
-
+app.get("/", (res,req)=>{
+    res.json("hello")
+})
 const port = process.env.PORT || 8080;
 app.listen(port, () => console.log(`Listening to ${port}...`));
 
