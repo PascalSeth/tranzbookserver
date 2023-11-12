@@ -10,7 +10,7 @@ app.use(cors({
 }));
 app.options('*', cors()); // Add this line to handle preflight requests for all routes
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://tranzbook.vercel.app');
+    res.header('Access-Control-Allow-Origin', 'https://tranzbook-oirjiltem-pascal-s-projects-c7de1887.vercel.app/');
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     res.header('Access-Control-Allow-Credentials', 'true'); // Add this line
