@@ -2,6 +2,10 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const connection = require('./db');
+const userRoutes = require('./routes/users');
+const authRoutes = require('./routes/auth');
+
 
 app.use(cors({
   origin: 'https://tranzbook-p619g7n5q-pascal-s-projects-c7de1887.vercel.app',
@@ -11,9 +15,6 @@ app.use(cors({
 
 app.use(express.json());
 
-const connection = require('./db');
-const userRoutes = require('./routes/users');
-const authRoutes = require('./routes/auth');
 
 connection();
 
