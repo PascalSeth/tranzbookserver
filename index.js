@@ -4,13 +4,13 @@ const cors = require('cors');
 const app = express();
 
 app.use(cors({
-  origin: 'https://tranzbook.vercel.app/',
+  origin: 'https://tranzbook-p619g7n5q-pascal-s-projects-c7de1887.vercel.app/',
   methods: ['POST', 'GET'],
   credentials: true,
 }));
 app.options('*', cors()); // Add this line to handle preflight requests for all routes
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://tranzbook.vercel.app/');
+    res.header('Access-Control-Allow-Origin', 'https://tranzbook-p619g7n5q-pascal-s-projects-c7de1887.vercel.app/');
     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     res.header('Access-Control-Allow-Credentials', 'true'); // Add this line
